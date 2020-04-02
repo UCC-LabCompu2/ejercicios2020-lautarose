@@ -8,6 +8,10 @@
         table, tr, td, th{
             border: 1px solid #000000;
         }
+
+        td#td01{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -15,33 +19,44 @@
 <!--Elimine las siglas CPAR, y 'Campus Party' debe ocupar 2 celdas-->
 <!--Como campus party y Jaiio comparten el mismo lugar, unifique las celdas que contienen 'Buenos Aires'-->
 <body>
-
-Siglas
-Congreso o Evento
-Carrera
-Web
-Lugar
-Fecha
-
-CPAR
-Campus Party
-Computación/Sistemas
-http://argentina.campus-party.org/
-Buenos Aires
-25-abr al 28-abr
-
-JAIIO
-Jornadas Argentinas de Informática
-Computación/Sistemas
-http://47jaiio.sadio.org.ar
-Buenos Aires
-3-sep al 7-sep
-
-WICC
-Workshop de Investigadores en Ciencias de la Computación
-Computación/Sistemas
-http://wicc2018.unne.edu.ar/
-Corrientes
-18-mar al 27-abr
+    <table>
+        <tbody>
+            <tr>
+                <th>Siglas</th>
+                <td></td>
+                <td>JAIIO</td>
+                <td>WICC</td>
+            </tr>
+            <tr>
+                <th>Congreso o Evento</th>
+                <td>Campus Party</td>
+                <td>Jornadas Argentinas de Informática</td>
+                <td>Workshop de Investigadores en Ciencias de la Computación</td>
+            </tr>
+            <tr>
+                <th>Carrera</th>
+                <td>Computación/Sistemas</td>
+                <td>Computación/Sistemas</td>
+                <td>Computación/Sistemas</td>
+            </tr>
+            <tr>
+                <th>Web</th>
+                <td><a href="http://argentina.campus-party.org">http://argentina.campus-party.org</a></td>
+                <td><a href="http://47jaiio.sadio.org.ar">http://47jaiio.sadio.org.ar</a></td>
+                <td><a href="http://wicc2018.unne.edu.ar">http://wicc2018.unne.edu.ar</a></td>
+            </tr>
+            <tr>
+                <th>Lugar</th>
+                <td colspan="2" id="td01">Buenos Aires</td>
+                <td>Corrientes</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>25-abr al 28-abr
+                <td>3-sep al 7-sep
+                <td>18-mar al 27-abr
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
