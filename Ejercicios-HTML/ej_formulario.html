@@ -21,45 +21,47 @@
 
 <div>
     <form>
-        <label for="fname">Nombre:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Apellido:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        Genero:<br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Masculino</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Femenino</label><br>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Otro</label><br>
-        <label for="age">Edad:</label><br>
-        <input type="number" id="age" name="age"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="user">Usuario:</label><br>
-        <input type="text" id="user" name="user"><br>
-        <label for="pass">Contrasena</label><br>
-        <input type="password" id="pass" name="pass"><br>
-        <label for="conf">Confirmar Contrasena:</label><br>
-        <input type="password" id="conf" name="conf"><br>
-        Tipo de servicio:<br>
-        <label for="servicio"></label><select id="servicio" name="servicio">
-        <option value="free">Free</option>
-        <option value="standard">Standard</option>
-        <option value="premium">Premium</option>
-    </select>
-        <br>Tema:<br>
-        <input type="checkbox" id="politica" name="Tema">
-        <label for="politica">Politica</label><br>
-        <input type="checkbox" id="negocios" name="Tema">
-        <label for="negocios">Negocios</label><br>
-        <input type="checkbox" id="tecnologia" name="Tema">
-        <label for="tecnologia">Tecnologia</label><br>
-        <input type="checkbox" id="salud" name="Tema">
-        <label for="salud">Salud</label><br>
-        <label for="comment">Agregue un comentario:</label><br>
-        <textarea id="comment"></textarea><br>
-        <input type="submit" value="Confirmar">
+        <fieldset><legend>Complete el siguiente Formulario:</legend>
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Apellido:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            Genero:<br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Masculino</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Femenino</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Otro</label><br>
+            <label for="age">Edad:</label><br>
+            <input type="number" id="age" name="age"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="user">Usuario:</label><br>
+            <input type="text" id="user" name="user"><br>
+            <label for="pass">Contrasena</label><br>
+            <input type="password" id="pass" name="pass"><br>
+            <label for="conf">Confirmar Contrasena:</label><br>
+            <input type="password" id="conf" name="conf"><br>
+            Tipo de servicio:<br>
+            <label for="servicio"></label><select id="servicio" name="servicio">
+                <option value="free">Free</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+            </select>
+            <br>Temas:<br>
+            <input type="checkbox" id="politica" name="Tema">
+            <label for="politica">Politica</label><br>
+            <input type="checkbox" id="negocios" name="Tema">
+            <label for="negocios">Negocios</label><br>
+            <input type="checkbox" id="tecnologia" name="Tema">
+            <label for="tecnologia">Tecnologia</label><br>
+            <input type="checkbox" id="salud" name="Tema">
+            <label for="salud">Salud</label><br>
+            <label for="comment">Agregue un comentario:</label><br>
+            <textarea id="comment"></textarea><br>
+            <input type="submit" value="Confirmar">
+        </fieldset>
     </form>
 </div>
 </body>
