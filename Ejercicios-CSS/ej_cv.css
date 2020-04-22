@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    font-family: 'Gugi', cursive;
+    background: lightblue;
+    background: linear-gradient(to left, lightblue , white);
+}
+div{
+    background: white;
+    opacity: 0.7;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+div .cursos{
+    color: #000fff;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 5px 30px;
+    border-radius: 25px;
+}
+
+div #imagen{
+    float: left;
+    width: 3%;
+}
