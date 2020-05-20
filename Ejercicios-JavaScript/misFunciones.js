@@ -154,3 +154,19 @@ function calcular_div() {
     document.getElementsByName("div_total")[0].innerHTML=(Number(num1)/Number(num2));
 }
 
+function cargar_web() {
+    var cantidad , unidad , urlcomp;
+    cantidad = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+    urlcomp = "segundaWeb.html#" + cantidad + "#" + unidad;
+    window.open(urlcomp);
+}
+
+function cargar_resultado() {
+    var cantidad , unidad , urlcomp;
+    urlcomp = window.location.href.split("/")[5];
+    console.log(urlcomp);
+    cantidad = urlcomp.split("#")[1];
+    unidad = urlcomp.split("#")[2];
+    document.getElementById("dist").value =" " + cantidad + " " + unidad;
+}
