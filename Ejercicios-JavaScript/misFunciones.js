@@ -46,6 +46,13 @@ function cambiarunidades(id , value){
     }
 }
 
+/**
+ * Funcion que convierte grados a radianes o viceversa.
+ * @method convertirGR
+ * @param {string} id - el id de los inputs, grados o radianes.
+ * @return
+ */
+
 function convertirGR(id) {
     var grad , rad;
     if(id === "grados"){
@@ -59,3 +66,77 @@ function convertirGR(id) {
     document.getElementById("grados").value = grad;
     document.getElementById("radianes").value = rad;
 }
+
+/**
+ * Funcion que muestra u oculta un div.
+ * @method mostrar_ocultar
+ * @param {string} id - el id de los inputs, val_mostrar(si esta seleccionado mostrar) val_ocultar(si esta seleccionado ocultar).
+ * @return
+ */
+
+function mostrar_ocultar(valorMO) {
+    if(valorMO == "val_mostrar"){
+        document.getElementById("divMO").style.display='block';
+    }
+    else if(valorMO == "val_ocultar"){
+        document.getElementById("divMO").style.display='none';
+    }
+
+}
+
+/**
+ * Funcion que suma dos numeros.
+ * @method calcular_suma.
+ * @param
+ * @return
+ */
+
+function calcular_suma() {
+    var num1 , num2;
+    num1=document.getElementsByName("sum_num1")[0].value;
+    num2=document.getElementsByName("sum_num2")[0].value;
+    document.getElementsByName("sum_total")[0].value=(Number(num1)+Number(num2));
+}
+
+/**
+ * Funcion que resta dos numeros.
+ * @method calcular_resta.
+ * @param
+ * @return
+ */
+
+function calcular_resta() {
+    var num1 , num2;
+    num1=document.getElementsByName("res_num1")[0].value;
+    num2=document.getElementsByName("res_num2")[0].value;
+    document.getElementsByName("res_total")[0].value=(Number(num1)-Number(num2));
+}
+
+/**
+ * Funcion que multiplica dos numeros.
+ * @method calcular_mul.
+ * @param
+ * @return
+ */
+
+function calcular_mul() {
+    var num1 , num2;
+    num1=document.getElementsByName("mul_num1")[0].value;
+    num2=document.getElementsByName("mul_num2")[0].value;
+    document.getElementsByName("mul_total")[0].value=(Number(num1)*Number(num2));
+}
+
+/**
+ * Funcion que divide dos numeros.
+ * @method calcular_div.
+ * @param
+ * @return
+ */
+
+function calcular_div() {
+    var num1 , num2;
+    num1=document.getElementsByName("div_num1")[0].value;
+    num2=document.getElementsByName("div_num2")[0].value;
+    document.getElementsByName("div_total")[0].value= (Number(num1)/Number(num2));
+}
+
