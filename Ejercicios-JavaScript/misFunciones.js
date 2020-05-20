@@ -12,8 +12,13 @@
 
 function cambiarunidades(id , value){
     var metro , yarda , pulgada , pie;
+
+    if(value.includes(",")){
+        value = value.replace("," , ".");
+    }
+
     if(isNaN(value)){
-        alert("se ingreso un valor invalido: "+id);
+        alert("se ingreso un valor invalido en "+id);
         metro = "";
         pulgada = "";
         pie = "";
@@ -49,10 +54,10 @@ function cambiarunidades(id , value){
                 break;
         }
     }
-    document.lasunidades.unid_metro.value = metro;
-    document.lasunidades.unid_pulgada.value = pulgada;
-    document.lasunidades.unid_yarda.value = yarda;
-    document.lasunidades.unid_pie.value = pie;
+    document.lasunidades.unid_metro.value = Math.round(metro*100)/100;
+    document.lasunidades.unid_pulgada.value = Math.round(pulgada*100)/100;
+    document.lasunidades.unid_yarda.value = Math.round(yarda*100)/100;
+    document.lasunidades.unid_pie.value = Math.round(pie*100)/100;
 }
 
 /**
