@@ -170,3 +170,89 @@ function cargar_resultado() {
     unidad = urlcomp.split("#")[2];
     document.getElementById("dist").value =" " + cantidad + " " + unidad;
 }
+
+function canvascircuad() {
+ var canvas = document.getElementById("myCanvas");
+ var ctx = canvas.getContext("2d");
+
+ ctx.fillStyle=("#333899");
+
+ var Ymax = canvas.height;
+ var Xmax = canvas.width;
+ var margin = 5;
+
+ ctx.fillRect(margin,Ymax-40-margin,40,40);
+
+ ctx.fillStyle=("#ffffff");
+ ctx.arc(Xmax/2 , Ymax /2 , 20 , 0 , 2*Math.PI);
+ ctx.stroke();
+ ctx.fill();
+
+}
+
+var bandera;
+function dibujar(event){
+    var canvas = document.getElementById("canvaspaint");
+    var ctx = canvas.getContext("2d");
+    var posX = event.clientX;
+    var posY = event.clientY;
+    console.log(posX,posY);
+
+    canvas.onmousedown = function () {bandera = true;};
+    canvas.onmouseup = function () {bandera = false;};
+
+    if(bandera){
+        ctx.fillRect(posX , posY , 5 ,5 );
+        ctx.fill;
+    }
+}
+
+function reiniciarcanvas(){
+    var canvas = document.getElementById("canvaspaint");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}
+
+function dibujarCuadricula(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var alturaMax = canvas.height;
+    var anchoMax = canvas.width;
+
+    //dibujar lineas horizontales
+    ctx.beginPath();
+    for(var i = 0 ; i < alturaMax ; i += 20){
+        ctx.moveTo(0 , i);
+        ctx.lineTo(anchoMax , i);
+        ctx.strokeStyle = "#c6d9bf";
+        ctx.stroke();
+    }
+    ctx.closePath();
+
+    //dibujar lineas verticales
+    ctx.beginPath();
+    for(i = 0 ; i < anchoMax ; i += 20){
+        ctx.moveTo(i , 0);
+        ctx.lineTo(i , alturaMax);
+        ctx.strokeStyle = "#c6d9bf";
+        ctx.stroke();
+    }
+    ctx.closePath();
+
+    //eje x
+    ctx.beginPath();
+    ctx.moveTo( 0 , alturaMax/2);
+    ctx.lineTo(anchoMax , alturaMax/2);
+    ctx.strokeStyle = "#d90706";
+    ctx.stroke();
+    ctx.closePath();
+
+    //eje y
+    ctx.beginPath();
+    ctx.moveTo( anchoMax/2 , 0);
+    ctx.lineTo(anchoMax/2 , alturaMax);
+    ctx.strokeStyle = "#d90706";
+    ctx.stroke();
+    ctx.closePath();
+}
